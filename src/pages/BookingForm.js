@@ -1,6 +1,7 @@
 import { ReactComponent as IconClose } from "../assets/icons/icon_close.svg";
 import { ReactComponent as CalendarIcon } from "../assets/icons/icon_calendar.svg";
 import { ReactComponent as LocationIcon } from "../assets/icons/icon_location.svg";
+import { ReactComponent as CheckBox } from "../assets/icons/unchecked.svg";
 import jpLesson from "../assets/images/jp_lesson.png";
 import { useState } from "react";
 
@@ -27,7 +28,7 @@ const BookingForm = () => {
         <p className="block text-5xl text-left leading-[68px]">
           Choose the form of payment
         </p>
-        <IconClose className="mr-[6px] mt-[18px]" />
+        <IconClose className="mr-[6px] mt-[18px] cursor-pointer" />
       </div>
       <div className="booking_form-page--content p-[50px] pb-0">
         <div className="user-auth-part w-[650px] bg-[#F7FAFC] h-[164px] border-solid border rounded-[20px] border-[#D3DEE9] flex items-center px-[37px] py-[39px]">
@@ -116,8 +117,11 @@ const BookingForm = () => {
             })}
           </div>
           <form className="payment-check flex mt-[30px]">
-            <input type="checkbox" class="outline-2	w-[46px] h-[30px] " />
-            <label className="text-[26px] leading-[35px] text-[#718096] font-[500] text-left ml-[25px] ">
+            <div className="relative">
+              <input type="checkbox" class="absolute w-[30px] h-[30px] " />
+              <CheckBox class="absolute pointer-events-none	w-[30px] h-[30px] " />
+            </div>
+            <label className="text-[26px] leading-[35px] text-[#718096] font-[500] text-left ml-[55px] ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
               <span className="underline text-[#1E21FF] ml-1">do eiusmod</span>
             </label>
